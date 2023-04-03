@@ -20,7 +20,7 @@ return {
       end,
       desc = "Pick to close",
     },
-    ["<leader>b"] = { name = "Buffers" },
+    ["<leader>b"] = { name = "Bufers" },
   },
   t = {},
 }
