@@ -23,6 +23,7 @@ return {
     ["<leader>b"] = { name = "Bufers" },
     ---
     ["<Leader>m"] = { function() return ":Template " end, remap = true, desc = "Templates" },
+    --
   },
   t = {},
 }
