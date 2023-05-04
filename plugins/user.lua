@@ -19,17 +19,6 @@ return {
       }
     end,
   },
-  {
-    "glepnir/template.nvim",
-    cmd = { "Template", "TemProject" },
-    config = function()
-      require("template").setup {
-        temp_dir = "~/.config/nvim/lua/user/plugins/template.nvim/tempates",
-        author = "Denis Shpektor",
-        email = "shpektor.denis@gmaol.com",
-      }
-    end,
-  },
-  { "mg979/vim-visual-multi", branch = "master" },
+  { "mg979/vim-visual-multi",       branch = "master" },
   { "tweekmonster/django-plus.vim", branch = "master" },
 }
