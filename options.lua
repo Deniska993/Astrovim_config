@@ -5,10 +5,9 @@ return {
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true,         -- sets vim.opt.number
     spell = false,         -- sets vim.opt.spell
-    signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
-    wrap = false,          -- sets vim.opt.wrap
-    colorcolumn = "79",
-    mouse = "c",           -- Enable mouse support
+    signcolumn = "no",   -- sets vim.opt.signcolumn to auto
+    wrap = true,          -- sets vim.opt.wrap
+    mouse = "a",           -- Enable mouse support
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader

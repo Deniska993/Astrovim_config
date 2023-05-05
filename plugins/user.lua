@@ -19,6 +19,14 @@ return {
       }
     end,
   },
-  { "mg979/vim-visual-multi",       branch = "master" },
+  
   { "tweekmonster/django-plus.vim", branch = "master" },
+  
+  {"Tsuzat/NeoSolarized.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd [[ colorscheme NeoSolarized ]]
+    end,
+  }
 }
