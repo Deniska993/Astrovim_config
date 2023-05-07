@@ -1,3 +1,10 @@
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -18,7 +25,7 @@ return {
   },
 
   -- Set colorscheme to use
-  
+
   colorscheme = "NeoSolarized",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -60,14 +67,23 @@ return {
     performance = {
       rtp = {
         -- customize default disabled vim plugins
-        disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
+        disabled_plugins = { "", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin",
+        },
       },
     },
   },
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
+  vim.cmd("autocmd FileType python set sw=4 | set ts=4 | set sts=4"),
   -- anything that doesn't fit in the normal config locations above can go here
+  vim.cmd([[
+  augroup htmldjango
+    autocmd!
+    autocmd BufRead,BufNewFile *.html set filetype=htmldjango
+    autocmd BufRead,BufNewFile *.htmldjango set filetype=htmldjango
+  augroup END]]),
+
   polish = function()
     -- Set up custom filetypes
     -- vim.filetype.add {
@@ -82,4 +98,5 @@ return {
     --   },
     -- }
   end,
+
 }

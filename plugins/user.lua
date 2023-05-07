@@ -19,14 +19,13 @@ return {
       }
     end,
   },
-  
-  { "tweekmonster/django-plus.vim", branch = "master" },
-  
-  {"Tsuzat/NeoSolarized.nvim",
+
+  {
+    "Tsuzat/NeoSolarized.nvim",
     lazy = false,
     priority = 1000,
     config = function()
       vim.cmd [[ colorscheme NeoSolarized ]]
     end,
-  }
+  },
 }

@@ -1,13 +1,15 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
+
 return {
   opt = {
     -- set to true or false etc.
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true,         -- sets vim.opt.number
     spell = false,         -- sets vim.opt.spell
-    signcolumn = "no",   -- sets vim.opt.signcolumn to auto
-    wrap = true,          -- sets vim.opt.wrap
+    signcolumn = "no",     -- sets vim.opt.signcolumn to auto
+    wrap = true,           -- sets vim.opt.wrap
     mouse = "a",           -- Enable mouse support
+    updatetime = 1000,
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
@@ -27,4 +29,4 @@ return {
 --   local_vim.opt.shortmess = vim.opt.shortmess + { I = true } -- add to option list
 --
 --   return local_vim
---
+--   set Python-specific options
