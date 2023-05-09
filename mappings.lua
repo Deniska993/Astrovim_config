@@ -6,11 +6,14 @@
 return {
   n = {
     ["<leader>b"] = { name = "Bufers" },
-    ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },             -- move string up
-    ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },           -- move string down
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },          -- new tab
-    ["<leader>bD"] = { "<cmd>tabclose<cr>", desc = "Close tab" },      -- close tab
-    -- ["<leader>e"] = { "<cmd>NvimTreeToggle<cr>", desc = "Open tree" }, -- open tree
+    ["<A-k>"] = { ":m .-2<CR>==", desc = "Move line up" },     -- move string up
+    ["<A-j>"] = { ":m .+1<CR>==", desc = "Move line down" },   -- move string down
+    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },  -- new tab
+    ["<leader>bD"] = { "<cmd>tabclose<cr>", desc = "Close " }, -- close tab
+    ["+"] = { "<C-a>" },                                       -- increment
+    ["-"] = { "<C-x>" },                                       -- decrement
+    ['dw'] = { 'vb"_d' },                                      -- delete a word backwards
+    ["<C-a>"] = { "gg<S-v>G" },                                -- select all
 
   },
 }
